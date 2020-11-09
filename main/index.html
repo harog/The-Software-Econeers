@@ -91,8 +91,57 @@
                 >Account</a
               >
             </div>
+
+            <div id="modal-login-popup" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="w-form">
+                  <form
+                    id="email-form"
+                    name="email-form"
+                    data-name="Email Form"
+                  >
+                    <input
+                      type="email"
+                      class="footer-subs-email w-input"
+                      maxlength="256"
+                      name="Email"
+                      data-name="Email"
+                      placeholder="Email Address (Required)"
+                      id="email"
+                      required=""
+                    />
+                    <input
+                      type="password"
+                      class="footer-subs-email w-input"
+                      maxlength="256"
+                      name="Password"
+                      data-name="Password"
+                      placeholder="Password (Required)"
+                      id="password"
+                      required=""
+                    />
+                    <input
+                      type="submit"
+                      value="Log In"
+                      data-wait="Please wait..."
+                      class="main-button w-button"
+                    />
+                  </form>
+                  <div class="w-form-done">
+                    <div>Redirecting to your account page!</div>
+                  </div>
+                  <div class="w-form-fail">
+                    <div>Oops! Something went wrong while logging in.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="nav-cart">
               <div
+                id="login-modal"
                 data-node-type="commerce-cart-wrapper"
                 data-wf-cart-type="rightDropdown"
                 data-wf-cart-query=""
@@ -121,6 +170,35 @@
         </div>
       </div>
     </nav>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("modal-login-popup");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("login-modal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+
     <section class="section hero">
       <div class="container">
         <div class="row">
