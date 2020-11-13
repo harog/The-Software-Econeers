@@ -16,7 +16,7 @@
     "category":"Soups",
     "image": "imageURL",
     "ingredients":[
-     "tomato","broth","heavy cream,
+     "tomato","broth","heavy cream",
      "garlic"
     ]
   },
@@ -28,7 +28,7 @@
     "ingredients":[
       "butter","eggs",
       "chocolate chips",
-      "sugar","flour"
+      "sugar", "flour"
     ]
   }
 ]
