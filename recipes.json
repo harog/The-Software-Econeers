@@ -1,0 +1,39 @@
+[
+  {
+    "name":"Eggs and bacon",
+    "id":"1",
+    "category":"Breakfast",
+    "image": "imageURL",
+    "ingredients":[
+      {"name":"eggs"},
+      {"name":"bacon"}
+    ]
+
+
+  },
+  {
+    "name":"Tomato soup",
+    "id":"2",
+    "category":"Soups",
+    "image": "imageURL",
+    "ingredients":[
+      {"name":"tomato"},
+      {"name":"broth"},
+      {"name":"heavy cream"},
+      {"name":"garlic"}
+    ]
+  },
+  {
+    "name":"Chocolate Chip Cookie",
+    "id":"3",
+    "category":"Desserts",
+    "image": "imageURL",
+    "ingredients":[
+      {"name":"butter"},
+      {"name":"eggs"},
+      {"name":"chocolate chips"},
+      {"name":"sugar"},
+      {"name":"flour"}
+    ]
+  }
+]
