@@ -5,8 +5,7 @@
     "category":"Breakfast",
     "image": "imageURL",
     "ingredients":[
-      {"name":"eggs"},
-      {"name":"bacon"}
+      "eggs","bacon"
     ]
 
 
@@ -17,10 +16,8 @@
     "category":"Soups",
     "image": "imageURL",
     "ingredients":[
-      {"name":"tomato"},
-      {"name":"broth"},
-      {"name":"heavy cream"},
-      {"name":"garlic"}
+     "tomato","broth","heavy cream,
+     "garlic"
     ]
   },
   {
@@ -29,11 +26,9 @@
     "category":"Desserts",
     "image": "imageURL",
     "ingredients":[
-      {"name":"butter"},
-      {"name":"eggs"},
-      {"name":"chocolate chips"},
-      {"name":"sugar"},
-      {"name":"flour"}
+      "butter","eggs",
+      "chocolate chips",
+      "sugar","flour"
     ]
   }
 ]
