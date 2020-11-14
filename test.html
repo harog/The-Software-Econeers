@@ -7,44 +7,50 @@
     <title>JSON Test</title>
 </head>
 <body>
+
+<div>
+    <h1>test read from file</h1>
+    <button id="readRecipes">Breakfast recipes</button>
+</div>
 <div id="myData"></div>
 <script>
-    fetch('./recipes.json')
-        .then(function (response) {
-            return response.json();
-        })
+    document.getElementById("readRecipes").addEventListener("click", function(){fetchData('Breakfast')})
+    function fetchData(value) {
+        fetch('./recipes.json')
+            .then(function (response) {
+                return response.json();
+            })
 
-        .then(function (data) {
-            displayData(data);
-        })
-        .catch(function (err) {
-            console.log('error: ' + err);
-        });
+            .then(function (data) {
+                displayData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
 
-    function displayData(data) {
-        console.log(data);
-        var results = [];
-        var value='Breakfast';
 
-        for (var i=0 ; i < data.length ; i++)
-        {
-            if (data[i].category == value) {
-                results.push(data[i]);
+        function displayData(data) {
+            console.log(data);
+            var results = [];
+            //var value = 'Breakfast';
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].category == value) {
+                    results.push(data[i]);
+                }
             }
+            console.log(results);
+            var mainContainer = document.getElementById("myData");
+            for (var j = 0; j < results.length; j++) {
+
+                var recipeName = document.createElement("div");
+                recipeName.innerHTML = results[j].name;
+                mainContainer.appendChild(recipeName);
+
+            }
+
+
         }
-        console.log(results);
-        var mainContainer = document.getElementById("myData");
-        for (var j= 0; j< results.length; j++) {
-
-           var recipeName = document.createElement("div");
-            div.innerHTML = results[j].name;
-            mainContainer.appendChild(recipeName);
-
-        }
-
-            
-
-
     }
 </script>
 </body>
