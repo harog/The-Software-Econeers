@@ -47,15 +47,19 @@
 				border-collapse: collapse;
 				width: 100%;
 			}
-
-			#ingredients td, #ingredients th {
+			#selectedIngredients {
+				font-family: Arial, Helvetica, sans-serif;
+				border-collapse: collapse;
+				width: 25%;
+			}
+			#selectedIngredients td, ingredients td, #ingredients th {
 				border: 1px solid #ddd;
 				padding: 8px;
 			}
 
 			#ingredients tr:nth-child(even){background-color: #f2f2f2;}
 
-			#ingredients tr:hover {background-color: #ddd;}
+			#selectedIngredients tr, ingredients tr:hover {background-color: #ddd;}
 
 			#ingredients th {
 				padding-top: 12px;
@@ -258,12 +262,12 @@
 							</tr>
 						</table>
 						<br>
-						<table id="ingredients">
+						<table id="selectedIngredients">
 							<tr>
 								<th>Selected Ingredients</th>
 							</tr>
 							<tr>
-								<td>Chicken</td>
+								<td></td>
 							</tr>
 						</table>
 					<br>
