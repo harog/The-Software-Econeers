@@ -1,0 +1,4 @@
+[
+    {"id":1,"name":"Eggs and bacon","category":1,"ingredients":[1, 2],"image_url":"<path>"},
+    {"id":2,"name":"Tomato soup","category":2,"ingredients":[2,3,4],"image_url":"<path>"}
+]
