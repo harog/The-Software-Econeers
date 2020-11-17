@@ -4,8 +4,7 @@
     "id":"1",
     "category":"Breakfast",
     "image": "imageURL",
-    "ingredients":[
-      "eggs","bacon"
+    "ingredients": 1,2 
     ]
 
 
