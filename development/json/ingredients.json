@@ -1,15 +1,15 @@
 [
-    {"id":1,"ingredients":"Egg"},
-    {"id":2,"ingredients":"Bacon"},
-    {"id":3,"ingredients":"Tomato"},
-    {"id":4,"ingredients":"Heavy cream"},
-    {"id":5,"ingredients":"Garlic"},
-    {"id":6,"ingredients":"Tofu"},
-    {"id":7,"ingredients":"Veggie bacon"},
-    {"id":8,"ingredients":"Beyond Meats bacon"},
-    {"id":9,"ingredients":"Almond milk"},
-    {"id":10,"ingredients":"Oat milk"},
-    {"id":11,"ingredients":"Parmesan cheese"},
-    {"id":12,"ingredients":"Onions"},
-    {"id":13,"ingredients":"Pasta"}
+    {"id":1,"name":"Egg"},
+    {"id":2,"name":"Bacon"},
+    {"id":3,"name":"Tomato"},
+    {"id":4,"name":"Heavy cream"},
+    {"id":5,"name":"Garlic"},
+    {"id":6,"name":"Tofu"},
+    {"id":7,"name":"Veggie bacon"},
+    {"id":8,"name":"Beyond Meats bacon"},
+    {"id":9,"name":"Almond milk"},
+    {"id":10,"name":"Oat milk"},
+    {"id":11,"name":"Parmesan cheese"},
+    {"id":12,"name":"Onions"},
+    {"id":13,"name":"Pasta"}
 ]
