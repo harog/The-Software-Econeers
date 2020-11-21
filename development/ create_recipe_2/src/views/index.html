@@ -9,28 +9,28 @@
   </head>
   <body>
     <header>
-      <h1>
-        Create recipe by Ingredient(s)
-      </h1>
+      <h1>Create recipe by Ingredient(s)</h1>
     </header>
 
     <main>
       <p>
         <input
           type="button"
-          style="margin: 10px 0;"
+          style="margin: 10px 0"
           onclick="populateSelect()"
           value="Click to Populate SELECT with JSON"
         />
       </p>
 
-      <!--The SELECT element.-->
+      <!--The SELECT element-->
       <select id="sel" onchange="show(this)">
         <option value="">-- Select --</option>
       </select>
 
+      <!--Upon selection will populate with ID / Name of Ingredient-->
       <p id="msg"></p>
 
+      <!--Send POST request to update backend JSON to include added ingredient-->
       <form
         action="/new"
         method="POST"
@@ -48,10 +48,12 @@
         <button type="submit">Add</button>
       </form>
 
+      <!--Ingredients currently in temp JSON database for recipe-->
       <section class="ingredients">
         <ul id="ingredients"></ul>
       </section>
 
+      <!--Reset the temp JSON database to default-->
       <p><a href="/reset">Reset</a></p>
     </main>
 
@@ -59,9 +61,8 @@
     <script src="/client.js"></script>
     <script>
       function populateSelect() {
-        
-        alert("Select clicked!");
-
+        // Need to figure out how to push backend to frontend
+        // Need to move this JSON out of <script>
         var ingredients = [
           { id: 1, name: "Egg" },
           { id: 2, name: "Bacon" },
@@ -75,12 +76,12 @@
           { id: 10, name: "Oat milk" },
           { id: 11, name: "Parmesan cheese" },
           { id: 12, name: "Onions" },
-          { id: 13, name: "Pasta" }
+          { id: 13, name: "Pasta" },
         ];
 
         var ele = document.getElementById("sel");
         for (var i = 0; i < ingredients.length; i++) {
-          // POPULATE SELECT ELEMENT WITH JSON.
+          // Populate select element with JSON values
           ele.innerHTML =
             ele.innerHTML +
             '<option value="' +
@@ -92,7 +93,7 @@
       }
 
       function show(ele) {
-        // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+        // Get the selected value from <select> element and present id and name
         var msg = document.getElementById("msg");
 
         msg.innerHTML =
@@ -103,6 +104,7 @@
           ele.value +
           "</b>";
 
+        // Populate form input box with selected ingredient so user does not need to type
         var input_box = document.getElementById("ingredient");
         input_box.value = ele.options[ele.selectedIndex].text;
       }

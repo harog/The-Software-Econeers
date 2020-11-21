@@ -10,16 +10,6 @@ var db = low(adapter);
 var adapter_2 = new FileSync("/sandbox/db/ingredients.json");
 var db_2 = low(adapter_2);
 var test_json_db = db_2.getState(db_2);
-console.log("Hello, testing!!");
-console.log(typeof test_json_db);
-console.log(test_json_db.ingredients);
-console.log(test_json_db.ingredients.length);
-console.log(test_json_db.ingredients[1]["name"]);
-/*
-for (var i = 0; i < 5; i++) {
-  alert(test_json_db[1][i]);
-}
-*/
 
 var app = express();
 var bodyParser = require("body-parser");
@@ -29,6 +19,8 @@ app.use(express.static(path.join(srcPath, "public")));
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+// Default list of ingredients to populate the recipe
+// For testing purposes!!
 var defaultIngredients = [
   { name: "Eggs" },
   { name: "Bacon" },
@@ -51,6 +43,7 @@ app.get("/ingredients_db", function (request, response) {
   response.send(test_json_db.ingredients); // sends users back to the page
 });
 */
+
 app.post("/new", urlencodedParser, function (request, response) {
   db.get("ingredients").push({ name: request.body.ingredient }).write();
   response.redirect("/");
