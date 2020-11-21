@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingredients JSON DB Example</title>
+    <meta name="description" content="Lowdb JSON // Ingredients" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Create recipe by Ingredient(s)
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        <input
+          type="button"
+          style="margin: 10px 0;"
+          onclick="populateSelect()"
+          value="Click to Populate SELECT with JSON"
+        />
+      </p>
+
+      <!--The SELECT element.-->
+      <select id="sel" onchange="show(this)">
+        <option value="">-- Select --</option>
+      </select>
+
+      <p id="msg"></p>
+
+      <form
+        action="/new"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+        id="form1"
+      >
+        <input
+          name="ingredient"
+          type="text"
+          maxlength="100"
+          value=""
+          placeholder="Add an ingredient"
+          id="ingredient"
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <section class="ingredients">
+        <ul id="ingredients"></ul>
+      </section>
+
+      <p><a href="/reset">Reset</a></p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/client.js"></script>
+    <script>
+      function populateSelect() {
+        
+        alert("Select clicked!");
+
+        var ingredients = [
+          { id: 1, name: "Egg" },
+          { id: 2, name: "Bacon" },
+          { id: 3, name: "Tomato" },
+          { id: 4, name: "Heavy cream" },
+          { id: 5, name: "Garlic" },
+          { id: 6, name: "Tofu" },
+          { id: 7, name: "Veggie bacon" },
+          { id: 8, name: "Beyond Meats bacon" },
+          { id: 9, name: "Almond milk" },
+          { id: 10, name: "Oat milk" },
+          { id: 11, name: "Parmesan cheese" },
+          { id: 12, name: "Onions" },
+          { id: 13, name: "Pasta" }
+        ];
+
+        var ele = document.getElementById("sel");
+        for (var i = 0; i < ingredients.length; i++) {
+          // POPULATE SELECT ELEMENT WITH JSON.
+          ele.innerHTML =
+            ele.innerHTML +
+            '<option value="' +
+            ingredients[i]["id"] +
+            '">' +
+            ingredients[i]["name"] +
+            "</option>";
+        }
+      }
+
+      function show(ele) {
+        // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+        var msg = document.getElementById("msg");
+
+        msg.innerHTML =
+          "Selected Ingredient: <b>" +
+          ele.options[ele.selectedIndex].text +
+          "</b> </br>" +
+          "id: <b>" +
+          ele.value +
+          "</b>";
+
+        var input_box = document.getElementById("ingredient");
+        input_box.value = ele.options[ele.selectedIndex].text;
+      }
+    </script>
+  </body>
+</html>
