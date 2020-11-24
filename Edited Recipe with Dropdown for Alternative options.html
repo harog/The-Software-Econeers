@@ -41,6 +41,33 @@
     border:0;
 }
 
+.custom-button:active {
+background-color: red;
+transform: translateY(2px);
+}
+
+.button {
+            color: grey ;
+            border: none;
+            border-radius: 7px;
+            box-shadow: 0 5px #999;
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+         }
+         .button:hover {
+            color: darkgrey;
+            background-color: lightgrey;
+         }
+         .button:active {
+            background-color: red;
+            box-shadow: 0 5px black;
+            transform: translateY(2px);
+         }
+
 </style>
 </head>
 <body>
@@ -55,6 +82,7 @@
     <div class="title">
         <tr>
             <h2><i>Chicken Alfredo  </i><td><button class="custom-button" ><i class="fa fa-r fa-heart" aria-hidden="false"></i></button></td></h2>
+            <button class="fa fa-r fa-heart"></button>
         </tr>
     </div>
 
