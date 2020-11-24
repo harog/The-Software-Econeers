@@ -41,32 +41,10 @@
     border:0;
 }
 
-.custom-button:active {
-background-color: red;
-transform: translateY(2px);
+.custom-button:focus{
+    color:black;
+    border-color: ghostwhite;
 }
-
-.button {
-            color: grey ;
-            border: none;
-            border-radius: 7px;
-            box-shadow: 0 5px #999;
-            display: inline-block;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-            outline: none;
-         }
-         .button:hover {
-            color: darkgrey;
-            background-color: lightgrey;
-         }
-         .button:active {
-            background-color: red;
-            box-shadow: 0 5px black;
-            transform: translateY(2px);
-         }
 
 </style>
 </head>
@@ -82,7 +60,6 @@ transform: translateY(2px);
     <div class="title">
         <tr>
             <h2><i>Chicken Alfredo  </i><td><button class="custom-button" ><i class="fa fa-r fa-heart" aria-hidden="false"></i></button></td></h2>
-            <button class="fa fa-r fa-heart"></button>
         </tr>
     </div>
 
@@ -104,8 +81,18 @@ transform: translateY(2px);
         <h3>Instructions</h3>
         <ol>
             <li>Boil pasta for 8-10 minutes until aldente.</li>
-            <li>Heat oven to 350 degrees farenheit and bake chicken for 15 minutes until it has reach internal temperature of 135 degrees farenheit.</li>
-            <li>Slice cooked chicken and heat alfredo sauce on stove.</li>
+            <li><div class="dropdown">
+                <select style="font-size: 17px; font-family: 'Times New Roman', Times, serif; padding-right: 5px;" aria-label="conflict ingredient">
+                    <option value=>Heat oven to 350 degrees farenheit and bake chicken for 15 minutes until it has reach internal temperature of 135 degrees farenheit.</option> 
+                    <option value=>Heat a non-stick pan on medium heat. Add a drizzle of olive oil and desired amount of tofu. Season with salt, pepper, and oregono to taste. Cook for 4-6 minutes.</option>
+                    <option value=>Heat a non-stick pan on medium heat. Add a drizzle of olive oil and desired amount of plant-based sausage. Season with salt, pepper, and oregono to taste. Cook until golden brown.</option>
+                </select></li>
+            <li><div class="dropdown">
+                <select style="font-size: 17px; font-family: 'Times New Roman', Times, serif; padding-right: 5px;" aria-label="conflict ingredient">
+                    <option value=>Slice cooked chicken and heat alfredo sauce on stove.</option> 
+                    <option value=>Heat alfredo sauce on stove.</option>
+                    <option value=>Slice cooked plant-based sausage and heat alfredo sauce on stove.</option>
+                </select></li>
             <li>Add all ingredients together- sprinkle with parasen cheese and chives as desired. Enjoy!</li>
         </ol>
     </div>
