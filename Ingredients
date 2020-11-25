@@ -3,18 +3,29 @@
   "id":0,
   "name":"eggs",
   "substitute":[],
-  "issue":"some issue"
+  "issue":"some issue",
+  "category":"proteins"
 },
 {
   "id":1,
 	"name":"bacon",
 	"substitute":[2],
 	"issue":"some issue"
+	"category":"proteins"
 },
 {
   "id":2,
 	"name":"shiitake mushrooms",
 	"substitute":[],
-	"issue":"none"
+	"issue":"none",
+	"category":"proteins"
+},
+{
+  "id":3,
+        "name": "milk",
+	"substitute":[],
+	"issue: "some issue",
+	"category":"dairy"
+	
 }
 ]
