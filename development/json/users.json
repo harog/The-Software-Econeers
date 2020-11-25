@@ -1,0 +1,5 @@
+[
+    {"id":1,"username":"captaincrunch","password":"yummycereal", "saved": []},
+    {"id":2,"username":"tonythetiger","password":"frostedflakes", "saved": []},
+    {"id":3,"username":"imabee","password":"cheerios", "saved": []}
+]

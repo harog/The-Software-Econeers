@@ -1,0 +1,20 @@
+[
+{ 
+  "id":0,
+  "name":"eggs",
+  "substitute":[],
+  "issue":"some issue"
+},
+{
+  "id":1,
+	"name":"bacon",
+	"substitute":[2],
+	"issue":"some issue"
+},
+{
+  "id":2,
+	"name":"shiitake mushrooms",
+	"substitute":[],
+	"issue":"none"
+}
+]
