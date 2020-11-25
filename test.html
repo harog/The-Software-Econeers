@@ -11,16 +11,23 @@
 <div>
     <h1>test read from file</h1>
     <button id="breakfast">Breakfast recipes</button>
-    <button id="snacks">Button1</button>
-    <button id="lunch">Button1</button>
+    <button id="snacks">Snacks</button>
+    <button id="lunch">Lunch</button>
 
 
 </div>
 <div id="myData"></div>
 <script>
-    document.getElementById("breakfast").addEventListener("click", function(){fetchData('Breakfast')});
-    document.getElementById("snacks").addEventListener("click", function(){fetchData('snacks')});
-    document.getElementById("lunch").addEventListener("click", function(){fetchData('lunch')});
+    var buttons = document.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+        var self = buttons[i];
+        console.log(self);
+
+        self.addEventListener('click', function (){fetchData(this.id)});
+
+    }
+
+
     function fetchData(value) {
         fetch('./recipes.json')
             .then(function (response) {
@@ -38,7 +45,7 @@
         function displayData(data) {
             console.log(data);
             var results = [];
-            //var value = 'Breakfast';
+
 
             for (var i = 0; i < data.length; i++) {
                 if (data[i].category == value) {

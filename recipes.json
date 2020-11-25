@@ -6,7 +6,7 @@
     "image": "imageURL",
 
 
-    "ingredients": 1,2,
+    "ingredients": [1,2]
 
     ]
 
