@@ -8,7 +8,7 @@
 
     }
 
-
+//loads json from file
     function fetchData(value) {
         console.log('clicked'+ value.target.id);
         fetch('./recipes.json',{credentials:"same-origin"})
@@ -17,8 +17,9 @@
             })
 
             .then(function (data) {
-                displayData(data);
+                 return displayData(data);
             })
+
             .catch(function (err) {
                 console.log('error: ' + err);
             });
@@ -40,15 +41,23 @@
             console.log(mainContainer);
             for (var j = 0; j < results.length; j++) {
 
-                var recipeName = document.createElement("div");
+                var recipeName = document.createElement("button");
 
-                recipeName.innerHTML += "<button>"+results[j].name+ '</button>';
+                recipeName.innerHTML = results[j].name;
                 recipeName.id=results[j].id;
                 mainContainer.appendChild(recipeName);
-                console.log(recipeName);
+                var recipe=document.getElementById(recipeName.id);
+                console.log(recipe)
+                recipe.addEventListener('click',displaySingleRecipe);
+
+                function displaySingleRecipe(e){
+                    console.log(e.target.id);
+                }
+
 
             }
 
 
         }
+
     }
