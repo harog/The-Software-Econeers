@@ -2,26 +2,25 @@
   {
     "name":"Eggs and bacon",
     "id":"1",
-    "category":"Breakfast",
+    "category":"breakfast",
     "image": "imageURL",
 
 
     "ingredients": [1,2]
 
-    ]
+
 
 
   },
+
   {
     "name":"Tomato soup",
     "id":"2",
-    "category":"Soups",
+    "category":"lunch",
     "image": "imageURL",
     "ingredients":[
 
 
-     "tomato","broth","heavy cream",
-     "garlic"
 
     ]
   },
@@ -37,6 +36,13 @@
     ]
 
 
+  }
+  {
+    "name":"French Toast",
+    "id":"4",
+    "category":"breakfast",
+    "image":"",
+    "ingredients":[0,3,4]
   }
 ]
 

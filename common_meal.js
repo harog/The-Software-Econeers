@@ -1,35 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JSON Test</title>
-</head>
-<body>
-
-<div>
-    <h1>test read from file</h1>
-    <button id="breakfast">Breakfast recipes</button>
-    <button id="snacks">Snacks</button>
-    <button id="lunch">Lunch</button>
-
-
-</div>
-<div id="myData"></div>
-<script>
     var buttons = document.querySelectorAll("button");
+    console.log(buttons);
     for (var i = 0; i < buttons.length; i++) {
         var self = buttons[i];
-        console.log(self);
+        self.addEventListener('click', function (){fetchData(event)});
 
-        self.addEventListener('click', function (){fetchData(this.id)});
 
     }
 
 
     function fetchData(value) {
-        fetch('./recipes.json')
+        console.log('clicked'+ value.target.id);
+        fetch('./recipes.json',{credentials:"same-origin"})
             .then(function (response) {
                 return response.json();
             })
@@ -43,28 +25,30 @@
 
 
         function displayData(data) {
-            console.log(data);
+
             var results = [];
 
-
             for (var i = 0; i < data.length; i++) {
-                if (data[i].category == value) {
+                if (data[i].category == value.target.id) {
                     results.push(data[i]);
                 }
             }
             console.log(results);
-            var mainContainer = document.getElementById("myData");
+            var oldButton=document.getElementById(value.target.id);
+            oldButton.remove();
+            var mainContainer = document.getElementById(value.target.id+"-div");
+            console.log(mainContainer);
             for (var j = 0; j < results.length; j++) {
 
                 var recipeName = document.createElement("div");
-                recipeName.innerHTML = results[j].name;
+
+                recipeName.innerHTML += "<button>"+results[j].name+ '</button>';
+                recipeName.id=results[j].id;
                 mainContainer.appendChild(recipeName);
+                console.log(recipeName);
 
             }
 
 
         }
     }
-</script>
-</body>
-</html>

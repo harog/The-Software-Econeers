@@ -52,7 +52,7 @@
             <div class="nav-menu">
               <a href="index.html" class="nav-menu-link small-caps-text"
                 >Main</a>
-              <a href="find.html" class="nav-menu-link small-caps-text"
+              <a href="#common meal" class="nav-menu-link small-caps-text"
                 >Find recipes</a>
               <a href="create.html" class="nav-menu-link small-caps-text"
                 >Create recipes</a>								
@@ -288,7 +288,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section id="common meal" class="section">
       <div class="container">
         <div class="row">
           <div class="product-header">
@@ -297,7 +297,26 @@
             </div>
           </div>
           <div class="collection-showcase">
-            <div class="collection-item">
+              <div id="breakfast-div" class="collection-item">
+                  <img
+                          src="images/marinated-flank-salad.jpg"
+                          loading="lazy"
+                          sizes="(max-width: 479px) 92vw, (max-width: 767px) 93vw, (max-width: 991px) 94vw, 45vw"
+                          srcset="
+                  images/marinated-flank-salad-p-500.jpeg  500w,
+                  images/marinated-flank-salad-p-800.jpeg  800w,
+                  images/marinated-flank-salad.jpg        1000w
+                "
+                          alt=""
+                          class="collection-image"
+                  />
+
+                  <div class="collection-info">
+                      <h2 class="collection-title">Breakfast</h2>
+                      <button id='breakfast' class="main-button white w-button">View</button>
+                  </div>
+              </div>
+            <div id="lunch-div" class="collection-item">
               <img
                 src="images/marinated-flank-salad.jpg"
                 loading="lazy"
@@ -310,10 +329,10 @@
                 alt=""
                 class="collection-image"
               />
-              <a href="" class="collection-link w-inline-block"></a>
+
               <div class="collection-info">
                 <h2 class="collection-title">Lunch</h2>
-                <a href="" class="main-button white w-button">View</a>
+                <button id='lunch' class="main-button white w-button">View</button>
               </div>
             </div>
             <div class="collection-item">
@@ -329,10 +348,10 @@
                 alt=""
                 class="collection-image"
               />
-              <a href="" class="collection-link w-inline-block"></a>
+
               <div class="collection-info">
                 <h2 class="collection-title">Dinner</h2>
-                <a href="" class="main-button white w-button">view</a>
+                <button id='dinner' class="main-button white w-button">view</button>
               </div>
             </div>
           </div>
@@ -528,5 +547,6 @@
     ></script>
     <script src="js/main-site.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="common_meal.js" type="text/javascript"></script>
   </body>
 </html>

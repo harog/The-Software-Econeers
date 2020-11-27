@@ -22,10 +22,18 @@
 },
 {
   "id":3,
-        "name": "milk",
+	"name": "milk",
 	"substitute":[],
-	"issue: "some issue",
+	"issue":"some issue",
 	"category":"dairy"
 	
-}
+},
+  {"id":4,
+    "name":"bread",
+    "substitute":[],
+    "issue":"some issue",
+    "category":"grains"
+
+
+  }
 ]
