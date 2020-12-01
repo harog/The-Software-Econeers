@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<title>Dinner Recipe</title>
+<style>
+
+/* Header Settings */
+.header {
+    padding: 1px;
+    text-align: center;
+    background: grey;
+    color: white;
+    font-size: 19px;
+}
+
+/* Page Content */
+.content {padding: 1px; border:2px black; background: ghostwhite}
+
+/* Image Orientation*/
+.picture {
+    padding: 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Recipe Title */
+.title {text-align: center;}
+
+/* Border Outline */
+.background {padding: 5px; background: ghostwhite;}
+
+/* Favorites Button */
+
+.custom-button {
+    padding: 5px 7px;
+    background: ghostwhite;
+    color: rgb(190, 189, 189);
+    float:center;
+    border:0;
+}
+
+.custom-button:focus{
+    color:black;
+    border-color: ghostwhite;
+}
+
+</style>
+</head>
+<body>
+
+<div class = "header">
+    <h1><i>Dinner Recipe</i></h1>
+</div>
+
+<div class="background">
+    <img class="picture" src="http://del.h-cdn.co/assets/17/24/1497458683-delish-one-pot-chicken-alfredo-1-1024.jpg" alt="image">
+
+    <div class="title">
+        <tr>
+            <h2><i>Chicken Alfredo  </i><td><button class="custom-button" ><i class="fa fa-r fa-heart"></i></button></td></h2>
+        </tr>
+    </div>
+
+    <div class="content">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>pasta</li>
+            <li><div class="dropdown">
+                <select style="font-size: 17px; font-family: 'Times New Roman', Times, serif; padding-right: 5px;" aria-label="conflict ingredient">
+                    <option value=>chicken</option> 
+                    <option value=>tofu</option>
+                    <option value=>plant-based sausage</option>
+                </select></div><a href="https://www.peta.org/issues/animals-used-for-food/animals-used-food-factsheets/poultry-eggs-industries-abuse-chickens/" style="color: red; font-size: 14px; tab-size: 4;" title="There is an ethical conflict regarding this animals quality of life and whether or not they are given a humane death. To view more information, select this link.">ethical dilema</a></li>
+            <li>alfredo sauce</li>
+            <li>parmesan cheese</li>
+            <li>chives</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Boil pasta for 8-10 minutes until aldente.</li>
+            <li><div class="dropdown">
+                <select style="font-size: 17px; font-family: 'Times New Roman', Times, serif; padding-right: 5px;" aria-label="conflict ingredient">
+                    <option value=>Heat oven to 350 degrees farenheit and bake chicken for 15 minutes until it has reach internal temperature of 135 degrees farenheit.</option> 
+                    <option value=>Heat a non-stick pan on medium heat. Add a drizzle of olive oil and desired amount of tofu. Season with salt, pepper, and oregono to taste. Cook for 4-6 minutes.</option>
+                    <option value=>Heat a non-stick pan on medium heat. Add a drizzle of olive oil and desired amount of plant-based sausage. Season with salt, pepper, and oregono to taste. Cook until golden brown.</option>
+                </select></li>
+            <li><div class="dropdown">
+                <select style="font-size: 17px; font-family: 'Times New Roman', Times, serif; padding-right: 5px;" aria-label="conflict ingredient">
+                    <option value=>Slice cooked chicken and heat alfredo sauce on stove.</option> 
+                    <option value=>Heat alfredo sauce on stove.</option>
+                    <option value=>Slice cooked plant-based sausage and heat alfredo sauce on stove.</option>
+                </select></li>
+            <li>Add all ingredients together- sprinkle with parasen cheese and chives as desired. Enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="footer-base">
+        <div class="base-column right"><br><br>
+            <div style="font-size: 13px; text-align: center" class="copyright-text small-text"><i>Brought to you by The Software Econeers</i></div>
+            <div style="font-size: 13px; text-align: center" class="small-text">©2020 Ethical Eats</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
