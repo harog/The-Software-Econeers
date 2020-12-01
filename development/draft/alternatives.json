@@ -1,0 +1,12 @@
+{
+  "alternatives": [
+    {
+      "ingredient": "Bacon",
+      "alternative": ["Tofu", "Veggie bacon", "Turkey bacon"]
+    },
+    {
+      "ingredient": "Parmesan",
+      "alternative": ["Yeast flakes", "Daiya cheese"]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<select id="selectAlternative"></select>
+
+<script>
+  array = [
+    {
+      ingredient: "1",
+      alternative: "Tofu",
+    },
+    {
+      ingredient: "1",
+      alternative: "Veggie Bacon",
+    },
+  ];
+
+  $.each(array, function (i, p) {
+    $("#selectAlternative").append(
+      $("<option></option>").val(p.ingredient).html(p.alternative)
+    );
+  });
+</script>
