@@ -1,0 +1,14 @@
+      p.recipe_card-ingredients
+        table#alternative_table
+          tr
+            th.align-left Ingredient
+            th.align-left Alternative
+          each val in recipe.ingredients 
+            tr
+              td.align-left= val 
+              each item in alternatives
+                if item.ingredient == val 
+                  td 
+                    select(name='alternativeDropDown', id='')
+                      each alternative in item.alternative 
+                        option= alternative
