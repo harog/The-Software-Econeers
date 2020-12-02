@@ -1,0 +1,163 @@
+[
+{ 
+  "id":0,
+  "name":"eggs",
+  "substitute":[],
+  "issue":"none",
+  "category":"proteins"
+},
+{
+  "id":1,
+	"name":"bacon",
+	"substitute":[2, 3],
+	"issue":"some issue",
+    "category":"proteins"
+},
+{
+  "id":2,
+	"name":"tofurkey bacon",
+	"substitute":[],
+	"issue":"none",
+	"category":"proteins"
+},
+{ 
+    "id":3,
+    "name":"plant-based sausage",
+    "substitute":[],
+    "issue":"none",
+    "category":"proteins"
+},
+{
+  "id":4,
+	"name":"steak strips",
+	"substitute":[5, 6],
+	"issue":"some issue",
+	"category":"proteins"
+},
+{
+  "id":5,
+	"name":"sliced portabella mushrooms",
+	"substitute":[],
+	"issue":"none",
+	"category":"proteins"
+},
+{
+  "id":6,
+	"name":"crumbled tofurkey bacon",
+	"substitute":[],
+	"issue":"none",
+	"category":"proteins"
+},
+{
+  "id":7,
+	"name":"chicken",
+	"substitute":[3, 8],
+	"issue":"some issue",
+	"category":"proteins"
+},
+{
+  "id":8,
+	"name":"tofu",
+	"substitute":[],
+	"issue":"none",
+	"category":"proteins"
+},
+{
+    "id":9,
+    "name":"paresan cheese",
+    "substitute":[],
+    "issue":"none",
+    "category":"dairy"
+},
+{
+    "id":10,
+      "name":"chedder cheese",
+      "substitute":[],
+      "issue":"none",
+      "category":"dairy"
+},
+{
+    "id":11,
+      "name": "milk",
+      "substitute":[],
+      "issue":"none",
+      "category":"dairy"
+},
+{
+    "id":12,
+      "name": "pasta",
+      "substitute":[],
+      "issue":"none",
+      "category":"grains"
+},
+{
+    "id":13,
+      "name": "bread",
+      "substitute":[],
+      "issue":"none",
+      "category":"grains"
+},
+{
+    "id":14,
+      "name": "chives",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":15,
+      "name": "romaine lettuce",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":16,
+      "name": "spinach",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":17,
+      "name": "red onion",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":18,
+      "name": "cherry tomato",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":19,
+      "name": "avacado",
+      "substitute":[],
+      "issue":"none",
+      "category":"vegetable"
+},
+{
+    "id":20,
+      "name": "cilantro",
+      "substitute":[],
+      "issue":"none",
+      "category":"spice"
+},
+{
+    "id":21,
+      "name": "balsamic vinegrette",
+      "substitute":[],
+      "issue":"none",
+      "category":"sauce"
+},
+{
+    "id":22,
+      "name": "alfredo sauce",
+      "substitute":[],
+      "issue":"none",
+      "category":"sauce"
+}
+]
