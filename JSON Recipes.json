@@ -1,0 +1,20 @@
+[
+{ 
+  "id":100,
+  "name":"Bacon and Eggs Recipe",
+  "ingredients":[0, 1, 10, 11, 14],
+  "category":"Breakfast"
+},
+{
+  "id":101,
+	"name":"Steak Salad Recipe",
+	"ingredients":[4, 15, 16, 17, 18, 19, 20, 21],
+    "category":"Lunch"
+},
+{
+  "id":102,
+	"name":"Dinner",
+	"ingredients":[7, 9, 12, 14, 22],
+	"category":"proteins"
+}
+]
