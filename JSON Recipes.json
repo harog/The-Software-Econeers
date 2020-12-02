@@ -13,8 +13,8 @@
 },
 {
   "id":102,
-	"name":"Dinner",
+	"name":"Chicken Alfredo",
 	"ingredients":[7, 9, 12, 14, 22],
-	"category":"proteins"
+	"category":"Dinner"
 }
 ]
