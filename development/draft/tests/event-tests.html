@@ -1,0 +1,58 @@
+<div class="box">
+  <div><strong>Log:</strong></div>
+  <div class="log"></div>
+</div>
+
+<table id="myTable">
+  <tr>
+    <td>Row1 cell1</td>
+    <td>Row1 cell2</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
+  </tr>
+  <tr>
+    <td>Row3 cell1</td>
+    <td>Row3 cell2</td>
+  </tr>
+</table>
+<br />
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+  function log(msg) {
+    var logElem = document.querySelector(".log");
+
+    var time = new Date();
+    var timeStr = time.toLocaleTimeString();
+    logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  }
+
+  log("Logging mouse events inside container...");
+
+  function logEvent(event) {
+    var msg =
+      "Event <strong>" +
+      event.type +
+      "</strong> at <em>" +
+      event.clientX +
+      ", " +
+      event.clientY +
+      "</em>";
+    log(msg);
+  }
+  var boxElem = document.querySelector(".box");
+
+  boxElem.addEventListener("mousedown", logEvent);
+  boxElem.addEventListener("mouseup", logEvent);
+  boxElem.addEventListener("click", logEvent);
+  boxElem.addEventListener("mouseenter", logEvent);
+  boxElem.addEventListener("mouseleave", logEvent);
+
+  function myFunction() {
+    var x = document.getElementById("myTable").rows[0].cells;
+    x[0].innerHTML = "Change";
+  }
+</script>
