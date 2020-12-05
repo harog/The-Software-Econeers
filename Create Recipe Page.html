@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Recipe</title>
+</head>
+
+<style>
+
+body{
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 0px;
+    background-color: #eeeeee;
+    margin: 5pt;
+}
+
+.title{
+    background-color: #eeeeee;
+    color: black;
+    font-size: 25px;
+    font-weight: 75;
+    padding: 50x 10px;
+    margin: 0px;
+    text-align: center;
+
+}
+
+
+.header{
+    background-color: rgb(128, 128, 128);
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    margin: 0;
+}
+
+.header-list{
+    color: white;
+    padding: 0px;
+    padding-left: 20px;
+    margin: 3px;
+}
+
+.header-item{
+    display: inline;
+    position: left;
+}
+
+.header-list.header-item.active{
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: inset 0 -3px black;
+}
+
+.navitem.navlink{
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recipe-container{
+    position: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 100px 100px 100px 100px;
+}
+
+.recipe{
+    background-color: white;
+    min-width: 275px;
+    max-width: 300px;
+    height: 400px;
+    margin: 3px;
+    padding: 20px;
+    display: flex;
+    flex: 0 20%;
+}
+
+.recipe-content{
+   width: 250px;
+   height: 375px;
+   padding: 1px;
+   padding-left: 5px;
+}
+
+.recipe-text{
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 340px;
+    margin: 1px;
+}
+
+.recipe-creator{
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: 300;
+    color: gray;
+    text-align: right;
+    margin: 1px;
+    padding: 3px;
+}
+
+</style>
+
+<body>
+
+    <div class="title">
+        <h1><i>Create Recipe</i></h1>
+        <p>Fill in the following form to create your own recipe!</p>
+    </div>
+
+    <div class="Recipe Title">
+        <h3>Title <input style="font-family: Comic Sans MS, sans-serif" type="text" id="title" /></h3>
+        <hr>
+    </div>
+
+    <div class="Ingredients">
+        <div class="Ingredient Options">
+            <h3>Select Ingredients</h3>
+            <ul id="dynamic-list"></ul>
+            <select name="dropdown" id="candidate" style="font-family: Comic Sans MS, sans-serif">
+                <option value="--Protein Options--">--Protein Options--</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Shiitake Mushrooms">Shiitake Mushrooms</option>
+                <option value="Eggs">Eggs</option>
+                <option value="Bacon">Bacon</option>
+                <option value="--Dairy Options">--Dairy Options--</option>
+                <option value="Milk">Milk</option>
+                <option value="Butter">Butter</option>
+                <option value="--Grain Options--">--Grain Options--</option>
+                <option value="Pasta">Pasta</option>
+                <option value="--Vegetable Options--">--Vegetable Options--</option>
+                <option value="Tomato">Tomato</option>
+                <option value="--Baking Options--">--Baking Options--</option>
+                <option value="Chocolate Chips">Chocolate Chips</option>
+                <option value="Sugar">Sugar</option>
+                <option value="Flour">Flour</option>
+            </select>
+
+            <button style="font-family: Comic Sans MS, sans-serif" onclick="addItem()">add item</button>
+            <button style="font-family: Comic Sans MS, sans-serif" onclick="removeItem()">remove item</button>
+        </div>
+        <hr>
+    </div>
+    
+    <div class=Instructions>
+        <div class="Optional Instructions">
+            <h3>Enter Instructions</h3>
+            <ol id="dynamic-text"></ol>
+            <input type="text" id="option" />
+            <button style="font-family: Comic Sans MS, sans-serif" onclick="addI()">add item</button>
+            <button style="font-family: Comic Sans MS, sans-serif" onclick="removeI()">remove item</button>
+        </div>
+        <hr>
+    </div>
+
+    <script>
+        function addI() {
+            var ol = document.getElementById("dynamic-text");
+            var option = document.getElementById("option");
+            var li = document.createElement("li");
+            li.setAttribute('id', option.value);
+            li.appendChild(document.createTextNode(option.value));
+            ol.appendChild(li);
+        }
+
+        function removeI() {
+            var ol = document.getElementById("dynamic-text");
+            var option = document.getElementById("option");
+            var item = document.getElementById(option.value);
+            ol.removeChild(item);
+        }
+
+        function addItem() {
+            var ul = document.getElementById("dynamic-list");
+            var candidate = document.getElementById("candidate");
+            var li = document.createElement("li");
+            li.setAttribute('id', candidate.value);
+            li.appendChild(document.createTextNode(candidate.value));
+            ul.appendChild(li);
+        }
+
+        function removeItem() {
+            var ul = document.getElementById("dynamic-list");
+            var candidate = document.getElementById("candidate");
+            var item = document.getElementById(candidate.value);
+            ul.removeChild(item);
+        }
+
+        function submit()
+        {
+            alert("Your recipe was submitted successfully!");
+        }
+    </script>
+
+    <button style="font-family: Comic Sans MS, sans-serif" onclick="submit()" type="submit">Save Recipe</button>
+
+</body>
+</html>
