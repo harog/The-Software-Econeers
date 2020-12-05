@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Recipe</title>
+</head>
+
+<body>
+
+    <h1><i>Create Recipe</i></h1>
+    <p>Fill in the following form to create your own recipe!</p>
+
+    <div class="Recipe Title">
+        <h3>Title <input type="text" id="title" /></h3>
+        <hr>
+    </div>
+
+    <div class="Ingredients">
+        <div class="Ingredient Options">
+            <h3>Select Ingredients</h3>
+            <ul id="dynamic-list"></ul>
+            <select name="dropdown" id="candidate">
+                <option value="--Protein Options--">--Protein Options--</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Shiitake Mushrooms">Shiitake Mushrooms</option>
+                <option value="Eggs">Eggs</option>
+                <option value="Bacon">Bacon</option>
+                <option value="--Dairy Options">--Dairy Options--</option>
+                <option value="Milk">Milk</option>
+                <option value="Butter">Butter</option>
+                <option value="--Grain Options--">--Grain Options--</option>
+                <option value="Pasta">Pasta</option>
+                <option value="--Vegetable Options--">--Vegetable Options--</option>
+                <option value="Tomato">Tomato</option>
+                <option value="--Baking Options--">--Baking Options--</option>
+                <option value="Chocolate Chips">Chocolate Chips</option>
+                <option value="Sugar">Sugar</option>
+                <option value="Flour">Flour</option>
+            </select>
+
+            <button onclick="addItem()">add item</button>
+            <button onclick="removeItem()">remove item</button>
+        </div>
+        <hr>
+    </div>
+    
+    <div class=Instructions>
+        <div class="Optional Instructions">
+            <h3>Enter Instructions</h3>
+            <ol id="dynamic-text"></ol>
+            <input type="text" id="option" />
+            <button onclick="addI()">add item</button>
+            <button onclick="removeI()">remove item</button>
+        </div>
+        <hr>
+    </div>
+
+    <script>
+        function addI() {
+            var ol = document.getElementById("dynamic-text");
+            var option = document.getElementById("option");
+            var li = document.createElement("li");
+            li.setAttribute('id', option.value);
+            li.appendChild(document.createTextNode(option.value));
+            ol.appendChild(li);
+        }
+
+        function removeI() {
+            var ol = document.getElementById("dynamic-text");
+            var option = document.getElementById("option");
+            var item = document.getElementById(option.value);
+            ol.removeChild(item);
+        }
+
+        function addItem() {
+            var ul = document.getElementById("dynamic-list");
+            var candidate = document.getElementById("candidate");
+            var li = document.createElement("li");
+            li.setAttribute('id', candidate.value);
+            li.appendChild(document.createTextNode(candidate.value));
+            ul.appendChild(li);
+        }
+
+        function removeItem() {
+            var ul = document.getElementById("dynamic-list");
+            var candidate = document.getElementById("candidate");
+            var item = document.getElementById(candidate.value);
+            ul.removeChild(item);
+        }
+
+        function submit()
+        {
+            alert("Your recipe was submitted successfully!");
+        }
+    </script>
+
+    <button onclick="submit()" type="submit">Save Recipe</button>
+
+</body>
+</html>
